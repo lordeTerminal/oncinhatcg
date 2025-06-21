@@ -5,12 +5,19 @@ import random
 
 router = APIRouter()
 
+# Modelos de entrada
 class JogadaRequest(BaseModel):
     jogador_id: int
     carta_escolhida_id: int
 
+class BotDeckRequest(BaseModel):
+    jogador_id: int
+    carta_ids: list[int]
+
+# Estados em memória (temporariamente, para simplificação)
 partidas_em_andamento = {}
 
+# Representa uma carta durante a batalha
 class CartaBatalha:
     def __init__(self, carta_dict):
         self.id = carta_dict["id"]
@@ -25,11 +32,54 @@ class CartaBatalha:
     def to_dict(self):
         return self.__dict__
 
+# Rota para gerar um deck aleatório para o bot (10 cartas)
+@router.get("/bot/deck")
+def gerar_deck_bot():
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
+
+    cursor.execute("SELECT * FROM carta")
+    todas_cartas = cursor.fetchall()
+
+    if not todas_cartas:
+        raise HTTPException(status_code=400, detail="Não há cartas disponíveis")
+
+    deck_bot = random.sample(todas_cartas, min(10, len(todas_cartas)))  # 10 cartas ou menos
+
+    cursor.close()
+    db.close()
+
+    return [c["id"] for c in deck_bot]
+
+# Rota para montar o deck do bot no banco
+@router.post("/bot/deck/montar")
+def montar_deck_bot(dados: BotDeckRequest):
+    db = get_db()
+    cursor = db.cursor()
+
+    # Remove deck antigo do bot
+    cursor.execute("DELETE FROM deck WHERE jogador_id=%s", (dados.jogador_id,))
+
+    # Insere as cartas do novo deck
+    for carta_id in dados.carta_ids:
+        cursor.execute(
+            "INSERT INTO deck (jogador_id, carta_id) VALUES (%s, %s)",
+            (dados.jogador_id, carta_id)
+        )
+
+    db.commit()
+    cursor.close()
+    db.close()
+
+    return {"msg": "Deck do bot montado com sucesso"}
+
+# Inicializa a batalha
 @router.post("/batalha/iniciar")
 def iniciar_batalha(jogador_id: int):
     db = get_db()
     cursor = db.cursor(dictionary=True)
 
+    # Carrega o deck do jogador
     cursor.execute("""
         SELECT c.* FROM deck d
         JOIN carta c ON d.carta_id = c.id
@@ -40,6 +90,7 @@ def iniciar_batalha(jogador_id: int):
     if len(deck_jogador) == 0:
         raise HTTPException(status_code=400, detail="Deck do jogador está vazio")
 
+    # Carrega o deck do bot (id fixo = 1)
     cursor.execute("""
         SELECT c.* FROM deck d
         JOIN carta c ON d.carta_id = c.id
@@ -66,16 +117,12 @@ def iniciar_batalha(jogador_id: int):
     }
 
     partidas_em_andamento[jogador_id] = partida
-    cursor.close()
-    db.close()
-
     return {
         "msg": "Batalha iniciada",
-        "mao_jogador": [c.to_dict() for c in partida["mao_jogador"]],
-        "hp_jogador": partida["hp_jogador"],
-        "hp_bot": partida["hp_bot"]
+        "mao_jogador": [c.to_dict() for c in partida["mao_jogador"]]
     }
 
+# Realiza uma jogada
 @router.post("/batalha/jogada")
 def jogada(dados: JogadaRequest):
     partida = partidas_em_andamento.get(dados.jogador_id)
@@ -88,6 +135,7 @@ def jogada(dados: JogadaRequest):
 
     carta_bot = random.choice(partida["mao_bot"])
 
+    # Aplica dano simultâneo
     carta_bot.hp -= carta_jogador.ataque
     carta_jogador.hp -= carta_bot.ataque
 
@@ -108,16 +156,18 @@ def jogada(dados: JogadaRequest):
 
     partida["log"].append(resultado)
 
+    # Função para processar carta (remover da mão e devolver para o deck)
     def processar_carta(carta, mao, deck):
         mao.remove(carta)
         if carta.hp > 0:
-            deck.insert(0, carta)
+            deck.insert(0, carta)  # volta ao topo do deck
         else:
-            deck.append(carta)
+            deck.append(carta)     # volta pro fundo do deck
 
     processar_carta(carta_jogador, partida["mao_jogador"], partida["deck_jogador"])
     processar_carta(carta_bot, partida["mao_bot"], partida["deck_bot"])
 
+    # Compra cartas para manter 3 na mão
     while len(partida["mao_jogador"]) < 3 and partida["deck_jogador"]:
         partida["mao_jogador"].append(partida["deck_jogador"].pop(0))
 
@@ -125,42 +175,18 @@ def jogada(dados: JogadaRequest):
         partida["mao_bot"].append(partida["deck_bot"].pop(0))
 
     fim = None
-    mensagem_fim = None
-
     if partida["hp_jogador"] <= 0:
         fim = "bot"
-        mensagem_fim = "Você perdeu!"
     elif partida["hp_bot"] <= 0:
         fim = "jogador"
-        mensagem_fim = "Você venceu!"
 
     if fim:
-        db = get_db()
-        cursor = db.cursor()
-        cursor.execute("SELECT nome FROM jogador WHERE id = %s", (partida["jogador_id"],))
-        nome_jogador = cursor.fetchone()
-        nome_jogador = nome_jogador[0] if nome_jogador else f"Jogador {partida['jogador_id']}"
-
-        nome_bot = "Bot"
-        vencedor = nome_jogador if fim == "jogador" else nome_bot
-
-        cursor.execute(
-            "INSERT INTO resultado (jogador1, jogador2, vencedor) VALUES (%s, %s, %s)",
-            (nome_jogador, nome_bot, vencedor)
-        )
-        db.commit()
-        cursor.close()
-        db.close()
-
         del partidas_em_andamento[dados.jogador_id]
 
     return {
         "resultado": resultado,
         "mao_jogador": [c.to_dict() for c in partida["mao_jogador"]],
-        "hp_jogador": partida["hp_jogador"],
-        "hp_bot": partida["hp_bot"],
         "fim": fim,
-        "mensagem_fim": mensagem_fim,
         "log": partida["log"]
     }
 
