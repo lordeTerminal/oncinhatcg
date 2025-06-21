@@ -1,0 +1,142 @@
+🏁 Início da batalha entre PlayerOne e PlayerTwo
+
+--- Rodada 1 ---
+Lobo das Sombras (HP 11) vs Lobo das Sombras (HP 11)
+Lobo das Sombras causou 6 de dano a Lobo das Sombras
+Lobo das Sombras causou 6 de dano a Lobo das Sombras
+
+--- Rodada 2 ---
+Lobo das Sombras (HP 5) vs Lobo das Sombras (HP 5)
+Lobo das Sombras causou 6 de dano a Lobo das Sombras
+Lobo das Sombras foi destruído. PlayerTwo recebe 1 de dano (HP 19)
+Lobo das Sombras causou 6 de dano a Lobo das Sombras
+Lobo das Sombras foi destruído. PlayerOne recebe 1 de dano (HP 19)
+
+--- Rodada 3 ---
+Dragão Ancião (HP 12) vs Arqueiro Élfico (HP 6)
+Dragão Ancião causou 8 de dano a Arqueiro Élfico
+Arqueiro Élfico foi destruído. PlayerTwo recebe 2 de dano (HP 17)
+Arqueiro Élfico causou 4 de dano a Dragão Ancião
+
+--- Rodada 4 ---
+Dragão Ancião (HP 8) vs Guardião de Gelo (HP 8)
+Dragão Ancião causou 8 de dano a Guardião de Gelo
+Guardião de Gelo foi destruído. PlayerTwo recebe 0 de dano (HP 17)
+Guardião de Gelo causou 4 de dano a Dragão Ancião
+
+--- Rodada 5 ---
+Dragão Ancião (HP 4) vs Troll das Cavernas (HP 7)
+Dragão Ancião causou 8 de dano a Troll das Cavernas
+Troll das Cavernas foi destruído. PlayerTwo recebe 1 de dano (HP 16)
+Troll das Cavernas causou 4 de dano a Dragão Ancião
+Dragão Ancião foi destruído. PlayerOne recebe 0 de dano (HP 19)
+
+--- Rodada 6 ---
+Troll das Cavernas (HP 7) vs Mago Aprendiz (HP 5)
+Troll das Cavernas causou 4 de dano a Mago Aprendiz
+Mago Aprendiz causou 3 de dano a Troll das Cavernas
+
+--- Rodada 7 ---
+Troll das Cavernas (HP 4) vs Mago Aprendiz (HP 1)
+Troll das Cavernas causou 4 de dano a Mago Aprendiz
+Mago Aprendiz foi destruído. PlayerTwo recebe 3 de dano (HP 13)
+Mago Aprendiz causou 3 de dano a Troll das Cavernas
+
+--- Rodada 8 ---
+Troll das Cavernas (HP 1) vs Guardião da Floresta (HP 6)
+Troll das Cavernas causou 4 de dano a Guardião da Floresta
+Guardião da Floresta causou 3 de dano a Troll das Cavernas
+Troll das Cavernas foi destruído. PlayerOne recebe 2 de dano (HP 17)
+
+--- Rodada 9 ---
+Serpente do Pântano (HP 4) vs Guardião da Floresta (HP 2)
+Serpente do Pântano causou 3 de dano a Guardião da Floresta
+Guardião da Floresta foi destruído. PlayerTwo recebe 1 de dano (HP 12)
+Guardião da Floresta causou 3 de dano a Serpente do Pântano
+
+--- Rodada 10 ---
+Serpente do Pântano (HP 1) vs Goblinzinho (HP 3)
+Serpente do Pântano causou 3 de dano a Goblinzinho
+Goblinzinho foi destruído. PlayerTwo recebe 0 de dano (HP 12)
+Goblinzinho causou 1 de dano a Serpente do Pântano
+Serpente do Pântano foi destruído. PlayerOne recebe 0 de dano (HP 17)
+
+--- Rodada 11 ---
+Fada da Névoa (HP 4) vs Fantasma Errante (HP 2)
+Fada da Névoa causou 0 de dano a Fantasma Errante
+Fantasma Errante causou 1 de dano a Fada da Névoa
+
+--- Rodada 12 ---
+Fada da Névoa (HP 3) vs Fantasma Errante (HP 2)
+Fada da Névoa causou 0 de dano a Fantasma Errante
+Fantasma Errante causou 1 de dano a Fada da Névoa
+
+--- Rodada 13 ---
+Fada da Névoa (HP 2) vs Fantasma Errante (HP 2)
+Fada da Névoa causou 0 de dano a Fantasma Errante
+Fantasma Errante causou 1 de dano a Fada da Névoa
+
+--- Rodada 14 ---
+Fada da Névoa (HP 1) vs Fantasma Errante (HP 2)
+Fada da Névoa causou 0 de dano a Fantasma Errante
+Fantasma Errante causou 1 de dano a Fada da Névoa
+Fada da Névoa foi destruído. PlayerOne recebe 0 de dano (HP 17)
+
+--- Rodada 15 ---
+Armadura de Pedra (HP 5) vs Fantasma Errante (HP 2)
+Armadura de Pedra causou 0 de dano a Fantasma Errante
+Fantasma Errante causou 1 de dano a Armadura de Pedra
+
+--- Rodada 16 ---
+Armadura de Pedra (HP 4) vs Fantasma Errante (HP 2)
+Armadura de Pedra causou 0 de dano a Fantasma Errante
+Fantasma Errante causou 1 de dano a Armadura de Pedra
+
+--- Rodada 17 ---
+Armadura de Pedra (HP 3) vs Fantasma Errante (HP 2)
+Armadura de Pedra causou 0 de dano a Fantasma Errante
+Fantasma Errante causou 1 de dano a Armadura de Pedra
+
+--- Rodada 18 ---
+Armadura de Pedra (HP 2) vs Fantasma Errante (HP 2)
+Armadura de Pedra causou 0 de dano a Fantasma Errante
+Fantasma Errante causou 1 de dano a Armadura de Pedra
+
+--- Rodada 19 ---
+Armadura de Pedra (HP 1) vs Fantasma Errante (HP 2)
+Armadura de Pedra causou 0 de dano a Fantasma Errante
+Fantasma Errante causou 1 de dano a Armadura de Pedra
+Armadura de Pedra foi destruído. PlayerOne recebe 0 de dano (HP 17)
+
+--- Rodada 20 ---
+Botas do Vento (HP 0) vs Fantasma Errante (HP 2)
+Botas do Vento causou 1 de dano a Fantasma Errante
+Fantasma Errante causou 1 de dano a Botas do Vento
+Botas do Vento foi destruído. PlayerOne recebe 1 de dano (HP 16)
+
+--- Rodada 21 ---
+Cajado do Arcanista (HP 0) vs Fantasma Errante (HP 1)
+Cajado do Arcanista causou 2 de dano a Fantasma Errante
+Fantasma Errante foi destruído. PlayerTwo recebe 1 de dano (HP 11)
+Fantasma Errante causou 1 de dano a Cajado do Arcanista
+Cajado do Arcanista foi destruído. PlayerOne recebe 1 de dano (HP 15)
+
+--- Rodada 22 ---
+Esqueleto Sombrio (HP 3) vs Cajado do Arcanista (HP 0)
+Esqueleto Sombrio causou 2 de dano a Cajado do Arcanista
+Cajado do Arcanista foi destruído. PlayerTwo recebe 2 de dano (HP 9)
+Cajado do Arcanista causou 2 de dano a Esqueleto Sombrio
+
+--- Rodada 23 ---
+Esqueleto Sombrio (HP 1) vs Feiticeiro Sombrio (HP 5)
+Esqueleto Sombrio causou 2 de dano a Feiticeiro Sombrio
+Feiticeiro Sombrio causou 4 de dano a Esqueleto Sombrio
+Esqueleto Sombrio foi destruído. PlayerOne recebe 3 de dano (HP 12)
+
+--- Rodada 24 ---
+Cavaleiro do Abismo (HP 2) vs Feiticeiro Sombrio (HP 3)
+Cavaleiro do Abismo causou 3 de dano a Feiticeiro Sombrio
+Feiticeiro Sombrio foi destruído. PlayerTwo recebe 0 de dano (HP 9)
+Feiticeiro Sombrio causou 4 de dano a Cavaleiro do Abismo
+Cavaleiro do Abismo foi destruído. PlayerOne recebe 2 de dano (HP 10)
+Vitória por resistência!

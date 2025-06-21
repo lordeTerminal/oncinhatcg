@@ -1,0 +1,33 @@
+
+🔥 BATALHA INICIADA! 🔥
+
+⚔️ Rodada 1
+Jogador 1: Campo do Pampa (ATK 2) VS Jogador 2: Clériga da Luz (ATK 3)
+❌ Clériga da Luz venceu a rodada!
+
+⚔️ Rodada 2
+Jogador 1: Jaguar Aquático (ATK 7) VS Jogador 2: Feiticeiro Sombrio (ATK 4)
+✅ Jaguar Aquático venceu a rodada!
+
+⚔️ Rodada 3
+Jogador 1: Arraia Elétrica (ATK 5) VS Jogador 2: Golem de Ferro (ATK 5)
+🤝 Empate! Ambas as cartas são descartadas.
+
+⚔️ Rodada 4
+Jogador 1: Jaguar Aquático (ATK 7) VS Jogador 2: Clériga da Luz (ATK 3)
+✅ Jaguar Aquático venceu a rodada!
+
+⚔️ Rodada 5
+Jogador 1: Tamanduá-bandeira (ATK 3) VS Jogador 2: Areia Negra do Oiapoque (ATK 1)
+✅ Tamanduá-bandeira venceu a rodada!
+
+⚔️ Rodada 6
+Jogador 1: Tamanduá-bandeira (ATK 3) VS Jogador 2: Fogo do Cerrado (ATK 5)
+❌ Fogo do Cerrado venceu a rodada!
+
+⚔️ Rodada 7
+Jogador 1: Jaguar Aquático (ATK 7) VS Jogador 2: Fogo do Cerrado (ATK 5)
+✅ Jaguar Aquático venceu a rodada!
+
+🏁 Fim da batalha!
+🏆 Jogador 1 venceu!

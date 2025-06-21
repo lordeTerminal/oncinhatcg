@@ -1,0 +1,17 @@
+🏁 Início da batalha entre PlayerOne e PlayerTwo
+
+--- Rodada 1 ---
+Feiticeiro Sombrio (HP 5) vs Fada da Névoa (HP 4)
+Feiticeiro Sombrio causou 4 de dano a Fada da Névoa
+Fada da Névoa foi destruído. PlayerTwo recebe 0 de dano (HP 20)
+Fada da Névoa causou 0 de dano a Feiticeiro Sombrio
+
+--- Rodada 2 ---
+Feiticeiro Sombrio (HP 5) vs Elemental de Fogo (HP 3)
+Feiticeiro Sombrio causou 4 de dano a Elemental de Fogo
+Elemental de Fogo foi destruído. PlayerTwo recebe 1 de dano (HP 19)
+Elemental de Fogo causou 5 de dano a Feiticeiro Sombrio
+Feiticeiro Sombrio foi destruído. PlayerOne recebe 0 de dano (HP 20)
+
+--- Rodada 3 ---
+Vitória por resistência!

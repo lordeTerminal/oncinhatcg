@@ -1,0 +1,22 @@
+🏁 Início da batalha entre Kael, o Invocador e Thorg, o Brutamontes
+
+--- Rodada 1 ---
+Piranha Voadora (HP 2) vs Floresta da Tijuca (HP 5)
+Piranha Voadora causou 4 de dano a Floresta da Tijuca
+Floresta da Tijuca causou 2 de dano a Piranha Voadora
+Piranha Voadora foi destruído. Kael, o Invocador recebe 0 de dano (HP 20)
+
+--- Rodada 2 ---
+Demônio Supremo (HP 10) vs Floresta da Tijuca (HP 1)
+Demônio Supremo causou 7 de dano a Floresta da Tijuca
+Floresta da Tijuca foi destruído. Thorg, o Brutamontes recebe 6 de dano (HP 19)
+Floresta da Tijuca causou 2 de dano a Demônio Supremo
+
+--- Rodada 3 ---
+Demônio Supremo (HP 8) vs Cajado do Arcanista (HP 0)
+Demônio Supremo causou 7 de dano a Cajado do Arcanista
+Cajado do Arcanista foi destruído. Thorg, o Brutamontes recebe 7 de dano (HP 12)
+Cajado do Arcanista causou 2 de dano a Demônio Supremo
+
+--- Rodada 4 ---
+Vitória por resistência!
